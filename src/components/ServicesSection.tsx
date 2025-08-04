@@ -6,27 +6,27 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Rocket,
-      title: "MVPs Rápidos",
-      description: "Transformamos sua ideia em produto mínimo viável em tempo recorde, validando conceitos e acelerando seu time-to-market.",
-      features: ["Prototipagem ágil", "Validação de mercado", "Desenvolvimento iterativo", "Deploy automatizado"]
+      title: "MVPs Ágeis e Precisos",
+      description: "Valide suas ideias no mercado com MVPs desenvolvidos para máxima eficiência e mínimo investimento, acelerando seu time-to-market.",
+      features: ["Prototipagem ágil", "Validação de mercado", "Desenvolvimento iterativo", "Deploy automatizado", "Métricas integradas", "Escalabilidade futura"]
     },
     {
       icon: Settings,
-      title: "Sistemas Personalizados",
-      description: "Desenvolvemos soluções sob medida que se adaptam perfeitamente às necessidades específicas do seu negócio.",
-      features: ["Arquitetura escalável", "Integração de APIs", "Interface intuitiva", "Segurança avançada"]
+      title: "Sistemas Sob Medida de Alta Performance",
+      description: "Desenvolvemos soluções que se adaptam perfeitamente às necessidades específicas do seu negócio, otimizadas para performance máxima.",
+      features: ["Arquitetura escalável", "Integração de APIs", "Interface intuitiva", "Segurança avançada", "Otimização de performance", "Documentação completa"]
     },
     {
       icon: LifeBuoy,
-      title: "Gestão de Produtos",
-      description: "Acompanhamos o ciclo de vida completo do seu produto digital, desde a concepção até a evolução contínua.",
-      features: ["Roadmap estratégico", "Análise de métricas", "Otimização contínua", "Suporte técnico"]
+      title: "Gestão Estratégica de Produtos Digitais",
+      description: "Mantenha seu produto sempre competitivo com nossa gestão estratégica completa do ciclo de vida digital.",
+      features: ["Roadmap estratégico", "Análise de métricas", "Otimização contínua", "Suporte técnico", "Monitoramento 24/7", "Evolução baseada em dados"]
     },
     {
       icon: GraduationCap,
-      title: "Treinamentos Práticos",
-      description: "Capacitamos sua equipe com conhecimentos práticos em tecnologia e metodologias ágeis de desenvolvimento.",
-      features: ["Workshops especializados", "Mentoria técnica", "Metodologias ágeis", "Boas práticas"]
+      title: "Capacitação Técnica Acelerada",
+      description: "Acelere o desenvolvimento da sua equipe com treinamentos práticos e atualizados, garantindo aplicação imediata do conhecimento.",
+      features: ["Workshops especializados", "Mentoria técnica", "Metodologias ágeis", "Boas práticas", "Certificações", "Material didático atualizado"]
     }
   ];
 
@@ -38,8 +38,8 @@ const ServicesSection = () => {
             Nossos <span className="text-caja-yellow">Serviços</span>
           </h2>
           <p className="text-xl text-caja-brown max-w-3xl mx-auto leading-relaxed">
-            Oferecemos soluções completas em tecnologia artesanal, combinando inovação, 
-            personalização e qualidade superior em cada projeto.
+            Oferecemos soluções digitais completas, combinando inovação de ponta, personalização inteligente 
+            e qualidade superior em cada projeto, porque são <strong>feitas sob medida para você</strong>.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ const ServicesSection = () => {
 
         <div className="text-center">
           <Button size="lg" className="bg-gradient-to-r from-caja-yellow to-caja-yellow-light hover:from-caja-yellow-dark hover:to-caja-yellow text-caja-dark font-semibold shadow-[var(--shadow-elegant)] transition-all duration-300">
-            Vamos Conversar Sobre Seu Projeto
+            Quero Minha Consultoria Personalizada
           </Button>
         </div>
       </div>

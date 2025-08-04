@@ -3,24 +3,24 @@ import { Heart, Zap, Users, Target } from "lucide-react";
 const AboutSection = () => {
   const values = [
     {
-      icon: Heart,
-      title: "Tecnologia Artesanal",
-      description: "Combinamos o cuidado e toque humano com a mais avançada tecnologia digital."
+      icon: Target,
+      title: "Precisão Técnica",
+      description: "Combinamos expertise de ponta com atenção meticulosa aos detalhes, garantindo soluções robustas e confiáveis."
     },
     {
-      icon: Target,
-      title: "Personalização",
-      description: "Cada solução é única, desenvolvida especificamente para atender suas necessidades."
+      icon: Heart,
+      title: "Personalização Inteligente",
+      description: "Cada solução é única, desenvolvida especificamente para atender suas necessidades e objetivos de negócio."
     },
     {
       icon: Zap,
-      title: "Inovação com Alma",
-      description: "Criamos tecnologia que não apenas funciona, mas que também inspira e transforma."
+      title: "Agilidade com Qualidade",
+      description: "Entregamos resultados rápidos sem comprometer a excelência, utilizando metodologias eficientes e testadas."
     },
     {
       icon: Users,
-      title: "Simplicidade",
-      description: "Design intuitivo e experiências claras que priorizam a usabilidade e eficiência."
+      title: "Inovação Orientada a Resultados",
+      description: "Criamos tecnologia que não apenas funciona, mas que impulsiona o seu negócio e gera valor real."
     }
   ];
 
@@ -32,16 +32,17 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-caja-dark mb-6">
-                Sobre a <span className="text-caja-yellow">Cajá</span>
+                Nossa <span className="text-caja-yellow">Abordagem Única</span>
               </h2>
               <p className="text-xl text-caja-brown leading-relaxed mb-6">
-                Somos especialistas em <strong>tecnologia artesanal</strong> — um conceito único que une 
-                a inovação digital de ponta com a personalização e o cuidado de soluções feitas sob medida.
+                Na Cajá, somos especialistas em transformar visões em produtos digitais únicos. Nossa abordagem combina 
+                a agilidade da inovação tecnológica com a qualidade superior e a personalização que são a nossa marca, 
+                entregando soluções <strong>feitas sob medida para você</strong>.
               </p>
               <p className="text-lg text-caja-brown leading-relaxed">
                 Nossa missão é entregar soluções digitais únicas, com agilidade, qualidade superior 
                 e personalização inteligente. Acreditamos que cada projeto é único e merece atenção 
-                especial, assim como uma peça artesanal.
+                especial e cuidado individualizado.
               </p>
             </div>
 
@@ -49,7 +50,8 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold text-caja-dark mb-3">Nosso Propósito</h3>
               <p className="text-caja-brown leading-relaxed">
                 "Entregar soluções digitais únicas, com agilidade, qualidade superior e personalização inteligente, 
-                transformando ideias em produtos que fazem a diferença no mundo digital."
+                transformando suas ideias em produtos que fazem a diferença no mundo digital, porque são 
+                <strong>feitas sob medida para você</strong>."
               </p>
             </div>
           </div>
