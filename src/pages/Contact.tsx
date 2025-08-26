@@ -1,3 +1,5 @@
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from "lucide-react";
@@ -8,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const Contact = () => {
+  useScrollToTop();
   const contactMethods = [
     {
       icon: Mail,
@@ -68,6 +71,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Contato Cajá - Fale Conosco sobre seu Projeto Digital"
+        description="Entre em contato com a Cajá para discutir seu projeto. Consultoria gratuita e resposta em 24h. Vamos criar sua solução sob medida."
+      />
       <Header />
       <main>
         {/* Hero Section */}

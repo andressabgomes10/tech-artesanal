@@ -1,3 +1,5 @@
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Rocket, Settings, LifeBuoy, GraduationCap, ArrowRight, CheckCircle } from "lucide-react";
@@ -5,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Services = () => {
+  useScrollToTop();
   const services = [
     {
       icon: Rocket,
@@ -93,6 +96,10 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Serviços Cajá - MVPs, Sistemas Personalizados e Gestão de Produtos"
+        description="Conheça nossos serviços de tecnologia artesanal: MVPs rápidos, sistemas personalizados, gestão de produtos e treinamentos práticos."
+      />
       <Header />
       <main>
         {/* Hero Section */}

@@ -1,3 +1,5 @@
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, CheckCircle, Calendar, Download, ArrowRight } from "lucide-react";
@@ -7,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const Newsletter = () => {
+  useScrollToTop();
   const benefits = [
     "Insights exclusivos sobre tecnologia artesanal",
     "Novidades sobre metodologias ágeis",
@@ -52,6 +55,10 @@ const Newsletter = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Newsletter Cajá - Insights Exclusivos sobre Tecnologia Artesanal"
+        description="Inscreva-se na newsletter da Cajá e receba insights exclusivos sobre tecnologia, desenvolvimento e inovação digital."
+      />
       <Header />
       <main>
         {/* Hero Section */}

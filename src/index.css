@@ -56,8 +56,11 @@ All colors MUST be HSL.
     --shadow-elegant: 0 10px 30px -10px hsl(var(--caja-yellow) / 0.2);
     --shadow-soft: 0 4px 20px -4px hsl(var(--caja-brown) / 0.1);
 
-    /* Animation */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Animation */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Animations keyframes */
+  --fade-in: fade-in 0.6s ease-out forwards;
 
     --radius: 0.5rem;
 
@@ -135,5 +138,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Custom animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: var(--fade-in);
   }
 }

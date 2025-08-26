@@ -1,3 +1,5 @@
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Search, Calendar, Tag, ArrowRight, BookOpen, Video, FileText, Users } from "lucide-react";
@@ -7,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 const Content = () => {
+  useScrollToTop();
   const categories = [
     { icon: BookOpen, name: "Blog & Notícias", count: 24, color: "bg-blue-100 text-blue-800" },
     { icon: FileText, name: "Estudos de Caso", count: 12, color: "bg-green-100 text-green-800" },
@@ -78,6 +81,10 @@ const Content = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Conteúdo & Insights - Blog Cajá sobre Tecnologia e Desenvolvimento"
+        description="Artigos, tutoriais e insights sobre tecnologia artesanal, desenvolvimento de software, MVPs e inovação digital."
+      />
       <Header />
       <main>
         {/* Hero Section */}

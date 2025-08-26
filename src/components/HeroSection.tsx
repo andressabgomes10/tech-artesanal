@@ -39,7 +39,7 @@ const HeroSection = () => {
                 placeholder="seu@email.com" 
                 className="flex-1 px-6 py-4 rounded-lg text-lg border-0 bg-white/10 backdrop-blur-sm text-white placeholder:text-white/70 focus:outline-none focus:ring-2 focus:ring-white/30"
               />
-              <Button size="lg" className="bg-white text-[hsl(263_70%_50%)] hover:bg-white/90 font-semibold px-8 py-4 text-lg transition-all duration-300 group whitespace-nowrap">
+              <Button size="lg" variant="hero" className="group whitespace-nowrap">
                 Começar Agora
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>

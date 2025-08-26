@@ -1,8 +1,11 @@
+import { useScrollToTop } from "@/hooks/useScrollToTop";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Heart, Zap, Users, Target, Award, Clock, Lightbulb } from "lucide-react";
 
 const About = () => {
+  useScrollToTop();
   const values = [
     {
       icon: Heart,
@@ -49,6 +52,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Sobre a Cajá - Tecnologia Artesanal | Nossa História e Valores"
+        description="Conheça a história, missão e valores da Cajá. Especialistas em tecnologia artesanal com foco em personalização e qualidade superior."
+      />
       <Header />
       <main>
         {/* Hero Section */}
