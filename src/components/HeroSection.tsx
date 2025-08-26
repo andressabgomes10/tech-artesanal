@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-[var(--gradient-hero)] overflow-hidden">
+      {/* Background overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
@@ -11,21 +14,21 @@ const HeroSection = () => {
         <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
         <div className="text-center max-w-4xl mx-auto space-y-12">
           {/* Main Content */}
           <div className="space-y-8">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white animate-fade-in drop-shadow-lg">
-              Tudo que você precisa para
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white animate-fade-in drop-shadow-2xl">
+              <span className="text-white drop-shadow-2xl">Tudo que você precisa para</span>
               <br />
-              <span className="bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent drop-shadow-md">
+              <span className="text-white drop-shadow-2xl font-extrabold">
                 transformar ideias
               </span>
               <br />
-              em produtos digitais únicos
+              <span className="text-white drop-shadow-2xl">em produtos digitais únicos</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-md font-medium">
+            <p className="text-xl lg:text-2xl text-white leading-relaxed max-w-3xl mx-auto drop-shadow-xl font-semibold">
               Combinamos a agilidade da inovação tecnológica com a qualidade superior e a personalização 
               que são a marca da Cajá — feita sob medida para você.
             </p>
@@ -37,9 +40,9 @@ const HeroSection = () => {
               <input 
                 type="email" 
                 placeholder="seu@email.com" 
-                className="flex-1 px-6 py-4 rounded-lg text-lg border-2 border-white/30 bg-white/15 backdrop-blur-sm text-white placeholder:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/60 font-medium"
+                className="flex-1 px-6 py-4 rounded-lg text-lg border-2 border-white/50 bg-white/20 backdrop-blur-sm text-white placeholder:text-white/90 focus:outline-none focus:ring-4 focus:ring-white/60 focus:border-white/80 font-medium shadow-lg"
               />
-              <Button size="lg" variant="hero" className="group whitespace-nowrap">
+              <Button size="lg" variant="hero" className="group whitespace-nowrap shadow-2xl border-4 border-white/40">
                 Começar Agora
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>

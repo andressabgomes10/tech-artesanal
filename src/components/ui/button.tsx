@@ -18,7 +18,7 @@ const buttonVariants = cva(
           "bg-caja-brown text-caja-white hover:bg-caja-brown-dark",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-caja-yellow underline-offset-4 hover:underline hover:text-caja-yellow-dark",
-        hero: "bg-white text-caja-dark hover:bg-white/90 font-semibold shadow-lg border-2 border-white/20",
+        hero: "bg-white text-caja-dark hover:bg-white/95 font-bold shadow-2xl border-2 border-white/30 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",
