@@ -24,14 +24,14 @@ const Header = () => {
     name: "Contato",
     href: "/contato"
   }];
-  return <header className="bg-background/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-border">
+  return <header className="bg-background/95 backdrop-blur-md shadow-soft sticky top-0 z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img src="/lovable-uploads/5fc60226-c087-44e8-9198-b86309f5ec63.png" alt="Cajá Logo" className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
             <div>
-              <h1 className="text-lg font-bold text-foreground group-hover:text-caja-yellow transition-colors duration-300">cajá</h1>
+              <h1 className="text-xl font-bold text-foreground group-hover:text-caja-yellow transition-colors duration-300">Cajá</h1>
             </div>
           </Link>
 
@@ -53,12 +53,12 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
-            <Button variant="ghost" asChild>
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="ghost" asChild className="text-muted-foreground">
               <Link to="/contato">Contato</Link>
             </Button>
-            <Button asChild>
-              <Link to="/contato">Começar Agora</Link>
+            <Button size="lg" asChild className="bg-caja-dark hover:bg-caja-brown-dark text-white font-semibold rounded-xl">
+              <Link to="/contato">Começar grátis</Link>
             </Button>
           </div>
 

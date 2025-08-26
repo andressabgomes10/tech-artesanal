@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system Cajá - Tecnologia Artesanal
-Paleta: Amarelo vibrante (principal), Branco puro (fundo), Marrom suave (detalhes)
+/* Design system Cajá - Relume Style
+Clean, modern, minimal with generous spacing
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 0 0% 9%;
 
     --primary: 45 100% 50%;
-    --primary-foreground: 0 0% 15%;
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 30 35% 45%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 45 20% 96%;
-    --muted-foreground: 0 0% 35%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 45 90% 55%;
-    --accent-foreground: 0 0% 15%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -37,80 +37,63 @@ All colors MUST be HSL.
     --input: 0 0% 95%;
     --ring: 45 100% 50%;
 
-    /* Cajá Custom Colors - High Contrast */
+    /* Cajá Custom Colors - Relume Style */
     --caja-yellow: 45 100% 50%;
     --caja-yellow-light: 45 90% 60%;
     --caja-yellow-dark: 45 80% 40%;
-    --caja-brown: 30 35% 35%;
-    --caja-brown-light: 30 25% 55%;
-    --caja-brown-dark: 30 45% 25%;
+    --caja-brown: 0 0% 45%;
+    --caja-brown-light: 0 0% 65%;
+    --caja-brown-dark: 0 0% 25%;
     --caja-white: 0 0% 100%;
-    --caja-dark: 0 0% 15%;
+    --caja-dark: 0 0% 9%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(263 70% 50%), hsl(263 70% 60%));
-    --gradient-hero-accent: linear-gradient(135deg, hsl(263 70% 40%), hsl(263 70% 50%));
+    /* Gradients - Relume inspired */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --gradient-hero-accent: linear-gradient(135deg, hsl(45 100% 96%), hsl(45 50% 98%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
 
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--caja-yellow) / 0.2);
-    --shadow-soft: 0 4px 20px -4px hsl(var(--caja-brown) / 0.1);
+    /* Shadows - Relume style */
+    --shadow-elegant: 0 8px 30px -12px hsl(0 0% 0% / 0.15);
+    --shadow-soft: 0 2px 10px -3px hsl(0 0% 0% / 0.1);
+    --shadow-card: 0 4px 20px -8px hsl(0 0% 0% / 0.12);
 
-  /* Animation */
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Animations keyframes */
-  --fade-in: fade-in 0.6s ease-out forwards;
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --fade-in: fade-in 0.6s ease-out forwards;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 0 0% 8%;
     --foreground: 0 0% 95%;
-
     --card: 0 0% 10%;
     --card-foreground: 0 0% 95%;
-
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
-
     --primary: 45 100% 50%;
     --primary-foreground: 0 0% 8%;
-
     --secondary: 30 35% 25%;
     --secondary-foreground: 0 0% 95%;
-
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
-
     --accent: 45 90% 55%;
     --accent-foreground: 0 0% 8%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-
     --border: 0 0% 20%;
     --input: 0 0% 15%;
     --ring: 45 100% 50%;
 
-    /* Dark mode Cajá colors - High Contrast */
     --caja-yellow: 45 100% 50%;
     --caja-yellow-light: 45 90% 60%;
     --caja-yellow-dark: 45 80% 40%;
@@ -137,7 +120,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
   
   /* Custom animations */

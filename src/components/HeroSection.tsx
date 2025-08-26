@@ -1,69 +1,110 @@
-import { ArrowRight, Code2, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center bg-[var(--gradient-hero)] overflow-hidden">
-      {/* Background overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/20"></div>
-      
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
-      </div>
+  const floatingCards = [
+    {
+      title: "MVP Ágil",
+      subtitle: "2-4 semanas",
+      color: "bg-gradient-to-br from-blue-50 to-blue-100",
+      icon: Zap,
+      position: "top-16 left-8"
+    },
+    {
+      title: "Sistema Personalizado", 
+      subtitle: "Sob medida",
+      color: "bg-gradient-to-br from-purple-50 to-purple-100",
+      icon: Target,
+      position: "top-32 right-12"
+    },
+    {
+      title: "Gestão de Produtos",
+      subtitle: "Suporte 24/7",
+      color: "bg-gradient-to-br from-green-50 to-green-100", 
+      icon: Sparkles,
+      position: "bottom-24 left-16"
+    }
+  ];
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
-        <div className="text-center max-w-4xl mx-auto space-y-12">
-          {/* Main Content */}
+  return (
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+      {/* Floating Cards */}
+      {floatingCards.map((card, index) => (
+        <Card key={index} className={`absolute ${card.position} ${card.color} shadow-card border-0 hidden lg:block animate-fade-in`} style={{ animationDelay: `${index * 0.2}s` }}>
+          <CardContent className="p-4 w-48">
+            <div className="flex items-center space-x-3 mb-2">
+              <div className="p-2 bg-white/60 rounded-lg">
+                <card.icon className="h-4 w-4 text-caja-dark" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm text-caja-dark">{card.title}</h4>
+                <p className="text-xs text-muted-foreground">{card.subtitle}</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 text-center">
+        <div className="space-y-12">
+          {/* Trust Badge */}
+          <div className="flex justify-center">
+            <Badge variant="secondary" className="px-4 py-2 text-sm bg-caja-yellow/10 text-caja-dark border-caja-yellow/20">
+              ⚡ +50 produtos únicos entregues
+            </Badge>
+          </div>
+
+          {/* Main Heading */}
           <div className="space-y-8">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white animate-fade-in drop-shadow-2xl">
-              <span className="text-white drop-shadow-2xl">Tudo que você precisa para</span>
+            <h1 className="text-5xl lg:text-8xl font-bold leading-tight text-caja-dark tracking-tight">
+              Websites designed &
               <br />
-              <span className="text-white drop-shadow-2xl font-extrabold">
-                transformar ideias
-              </span>
+              <span className="text-caja-yellow">built faster</span> with
               <br />
-              <span className="text-white drop-shadow-2xl">em produtos digitais únicos</span>
+              Tecnologia Artesanal
             </h1>
             
-            <p className="text-xl lg:text-2xl text-white leading-relaxed max-w-3xl mx-auto drop-shadow-xl font-semibold">
-              Combinamos a agilidade da inovação tecnológica com a qualidade superior e a personalização 
-              que são a marca da Cajá — feita sob medida para você.
+            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto font-medium">
+              Use nossa expertise como seu aliado de design, não uma substituição. Gere instantaneamente 
+              sitemaps, wireframes e protótipos para sites de marketing—tudo em minutos.
             </p>
           </div>
 
           {/* CTA Section */}
           <div className="flex flex-col items-center space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
-              <input 
-                type="email" 
-                placeholder="seu@email.com" 
-                className="flex-1 px-6 py-4 rounded-lg text-lg border-2 border-white/50 bg-white/20 backdrop-blur-sm text-white placeholder:text-white/90 focus:outline-none focus:ring-4 focus:ring-white/60 focus:border-white/80 font-medium shadow-lg"
-              />
-              <Button size="lg" variant="hero" className="group whitespace-nowrap shadow-2xl border-4 border-white/40">
-                Começar Agora
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-2xl">
+              <div className="relative flex-1">
+                <input 
+                  type="text" 
+                  placeholder="Descreva sua empresa em uma frase ou duas..." 
+                  className="w-full px-6 py-4 rounded-xl text-lg border-2 border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-4 focus:ring-caja-yellow/20 focus:border-caja-yellow font-medium shadow-soft"
+                />
+              </div>
+              <Button size="lg" className="bg-caja-dark hover:bg-caja-brown-dark text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-soft">
+                Gerar Site
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
             
-            <p className="text-sm text-white/90 font-medium">
-              Ao clicar em "Começar Agora", você concorda com nossos{" "}
-              <a href="#" className="underline hover:text-white transition-colors font-semibold">Termos & Condições</a>{" "}
-              e <a href="#" className="underline hover:text-white transition-colors font-semibold">Política de Privacidade</a>.
+            <p className="text-sm text-muted-foreground">
+              Teste gratuitamente com um{" "}
+              <button className="underline hover:text-caja-yellow transition-colors font-medium">exemplo</button>
             </p>
           </div>
 
-          {/* Trust Indicators */}
+          {/* Stats */}
           <div className="pt-16">
-            <p className="text-white/90 text-sm mb-8 font-medium">Empresas que confiam na Cajá</p>
-            <div className="flex justify-center items-center space-x-12 opacity-80">
-              <div className="text-white font-bold text-lg drop-shadow-sm">Santander</div>
-              <div className="text-white font-bold text-lg drop-shadow-sm">Canva</div>
-              <div className="text-white font-bold text-lg drop-shadow-sm">Apple</div>
-              <div className="text-white font-bold text-lg drop-shadow-sm">Microsoft</div>
-              <div className="text-white font-bold text-lg drop-shadow-sm">Calendly</div>
+            <p className="text-sm text-muted-foreground mb-8 font-medium">
+              Usado por marcas líderes e empresas de todo o mundo
+            </p>
+            <div className="flex justify-center items-center space-x-12 opacity-60">
+              <div className="text-caja-dark font-bold text-lg">Santander</div>
+              <div className="text-caja-dark font-bold text-lg">Canva</div>
+              <div className="text-caja-dark font-bold text-lg">Apple</div>
+              <div className="text-caja-dark font-bold text-lg">Microsoft</div>
+              <div className="text-caja-dark font-bold text-lg">Calendly</div>
             </div>
           </div>
         </div>

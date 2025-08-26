@@ -1,4 +1,5 @@
-import { Heart, Zap, Users, Target } from "lucide-react";
+import { Target, Zap, Users, Heart } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   const values = [
@@ -24,78 +25,75 @@ const AboutSection = () => {
     }
   ];
 
+  const stats = [
+    { number: "+50", label: "Projetos Únicos" },
+    { number: "100%", label: "Personalização" },
+    { number: "24h", label: "Resposta Inicial" },
+    { number: "98%", label: "Satisfação" }
+  ];
+
   return (
-    <section id="sobre" className="py-20 bg-caja-white">
+    <section id="sobre" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column - Content */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-caja-dark mb-6">
-                Nossa <span className="text-caja-yellow">Abordagem Única</span>
-              </h2>
-              <p className="text-xl text-caja-brown leading-relaxed mb-6 font-medium">
-                Na Cajá, somos especialistas em transformar visões em produtos digitais únicos. Nossa abordagem combina 
-                a agilidade da inovação tecnológica com a qualidade superior e a personalização que são a nossa marca, 
-                entregando soluções <strong className="text-caja-dark">feitas sob medida para você</strong>.
-              </p>
-              <p className="text-lg text-caja-brown leading-relaxed">
-                Nossa missão é entregar soluções digitais únicas, com agilidade, qualidade superior 
-                e personalização inteligente. Acreditamos que cada projeto é único e merece atenção 
-                especial e cuidado individualizado.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-r from-caja-yellow/20 to-caja-yellow-light/20 rounded-xl p-6 border-l-4 border-caja-yellow">
-              <h3 className="text-2xl font-bold text-caja-dark mb-3">Nosso Propósito</h3>
-              <p className="text-caja-dark leading-relaxed font-medium">
-                "Entregar soluções digitais únicas, com agilidade, qualidade superior e personalização inteligente, 
-                transformando suas ideias em produtos que fazem a diferença no mundo digital, porque são 
-                <strong className="text-caja-yellow-dark">feitas sob medida para você</strong>."
-              </p>
-            </div>
-          </div>
-
-          {/* Right Column - Values */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-caja-dark mb-8">Nossos Valores</h3>
-            
-            <div className="grid gap-6">
-              {values.map((value, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted transition-colors duration-300">
-                  <div className="flex-shrink-0 p-3 bg-gradient-to-br from-caja-yellow to-caja-yellow-light rounded-lg">
-                    <value.icon className="h-6 w-6 text-caja-dark" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-caja-dark mb-2">{value.title}</h4>
-                    <p className="text-caja-brown leading-relaxed">{value.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* Header */}
+        <div className="text-center mb-20 max-w-4xl mx-auto">
+          <h2 className="text-4xl lg:text-6xl font-bold text-foreground mb-8 tracking-tight">
+            Nossa <span className="text-caja-yellow">Abordagem Única</span>
+          </h2>
+          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed font-medium">
+            Na Cajá, transformamos visões em produtos digitais únicos. Combinamos agilidade 
+            tecnológica com qualidade superior e personalização inteligente.
+          </p>
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-20 pt-16 border-t border-border">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-caja-yellow mb-2">+50</div>
-              <div className="text-caja-brown">Projetos Únicos</div>
+        {/* Values Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          {values.map((value, index) => (
+            <Card key={index} className="border-0 shadow-card hover:shadow-elegant transition-all duration-300 group">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 p-3 bg-caja-yellow/10 rounded-xl group-hover:bg-caja-yellow/20 transition-colors duration-300">
+                    <value.icon className="h-6 w-6 text-caja-yellow" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-caja-yellow transition-colors duration-300">
+                      {value.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Mission Statement */}
+        <div className="text-center mb-20">
+          <Card className="border-0 shadow-card bg-gradient-to-br from-caja-yellow/5 to-caja-yellow/10 max-w-4xl mx-auto">
+            <CardContent className="p-12">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Nosso Propósito</h3>
+              <p className="text-xl text-foreground leading-relaxed font-medium">
+                "Entregar soluções digitais únicas, com agilidade, qualidade superior e personalização inteligente, 
+                transformando suas ideias em produtos que fazem a diferença no mundo digital."
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-caja-yellow mb-2">
+                {stat.number}
+              </div>
+              <div className="text-muted-foreground font-medium">
+                {stat.label}
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-caja-yellow mb-2">100%</div>
-              <div className="text-caja-brown">Personalização</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-caja-yellow mb-2">24h</div>
-              <div className="text-caja-brown">Resposta Inicial</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-caja-yellow mb-2">98%</div>
-              <div className="text-caja-brown">Satisfação</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
