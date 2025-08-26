@@ -34,10 +34,10 @@ const AboutSection = () => {
               <h2 className="text-4xl lg:text-5xl font-bold text-caja-dark mb-6">
                 Nossa <span className="text-caja-yellow">Abordagem Única</span>
               </h2>
-              <p className="text-xl text-caja-brown leading-relaxed mb-6">
+              <p className="text-xl text-caja-brown leading-relaxed mb-6 font-medium">
                 Na Cajá, somos especialistas em transformar visões em produtos digitais únicos. Nossa abordagem combina 
                 a agilidade da inovação tecnológica com a qualidade superior e a personalização que são a nossa marca, 
-                entregando soluções <strong>feitas sob medida para você</strong>.
+                entregando soluções <strong className="text-caja-dark">feitas sob medida para você</strong>.
               </p>
               <p className="text-lg text-caja-brown leading-relaxed">
                 Nossa missão é entregar soluções digitais únicas, com agilidade, qualidade superior 
@@ -46,12 +46,12 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-caja-yellow/10 to-caja-yellow-light/10 rounded-xl p-6">
+            <div className="bg-gradient-to-r from-caja-yellow/20 to-caja-yellow-light/20 rounded-xl p-6 border-l-4 border-caja-yellow">
               <h3 className="text-2xl font-bold text-caja-dark mb-3">Nosso Propósito</h3>
-              <p className="text-caja-brown leading-relaxed">
+              <p className="text-caja-dark leading-relaxed font-medium">
                 "Entregar soluções digitais únicas, com agilidade, qualidade superior e personalização inteligente, 
                 transformando suas ideias em produtos que fazem a diferença no mundo digital, porque são 
-                <strong>feitas sob medida para você</strong>."
+                <strong className="text-caja-yellow-dark">feitas sob medida para você</strong>."
               </p>
             </div>
           </div>

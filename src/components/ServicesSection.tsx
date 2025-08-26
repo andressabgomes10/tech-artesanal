@@ -37,9 +37,9 @@ const ServicesSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-caja-dark mb-6">
             Nossos <span className="text-caja-yellow">Serviços</span>
           </h2>
-          <p className="text-xl text-caja-brown max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-caja-brown max-w-3xl mx-auto leading-relaxed font-medium">
             Oferecemos soluções digitais completas, combinando inovação de ponta, personalização inteligente 
-            e qualidade superior em cada projeto, porque são <strong>feitas sob medida para você</strong>.
+            e qualidade superior em cada projeto, porque são <strong className="text-caja-dark">feitas sob medida para você</strong>.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full border-caja-brown text-caja-brown hover:bg-caja-brown hover:text-caja-white group transition-all duration-300">
+                <Button variant="outline" className="w-full border-2 border-caja-brown text-caja-brown hover:bg-caja-brown hover:text-caja-white group transition-all duration-300 font-semibold">
                   Saiba Mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

@@ -55,10 +55,10 @@ const ContactSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-caja-dark mb-6">
             Vamos <span className="text-caja-yellow">Conversar</span>
           </h2>
-          <p className="text-xl text-caja-brown max-w-3xl mx-auto leading-relaxed">
-            Pronto para transformar sua ideia em realidade? Entre em contato e receba 
-            uma consultoria personalizada gratuita.
-          </p>
+            <p className="text-xl text-caja-brown max-w-3xl mx-auto">
+              Pronto para transformar sua ideia em realidade? Entre em contato e receba 
+              uma consultoria personalizada gratuita.
+            </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -77,14 +77,14 @@ const ContactSection = () => {
                     <label className="block text-sm font-medium text-caja-dark mb-2">
                       Nome *
                     </label>
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="border-caja-brown/30 focus:border-caja-yellow"
-                      placeholder="Seu nome completo"
-                    />
+                     <Input
+                       name="name"
+                       value={formData.name}
+                       onChange={handleChange}
+                       required
+                       className="border-2 border-caja-brown/50 focus:border-caja-yellow text-caja-dark"
+                       placeholder="Seu nome completo"
+                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-caja-dark mb-2">
@@ -96,7 +96,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="border-caja-brown/30 focus:border-caja-yellow"
+                      className="border-2 border-caja-brown/50 focus:border-caja-yellow text-caja-dark"
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -106,40 +106,40 @@ const ContactSection = () => {
                   <label className="block text-sm font-medium text-caja-dark mb-2">
                     Empresa/Projeto
                   </label>
-                  <Input
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="border-caja-brown/30 focus:border-caja-yellow"
-                    placeholder="Nome da sua empresa ou projeto"
-                  />
+                   <Input
+                     name="company"
+                     value={formData.company}
+                     onChange={handleChange}
+                     className="border-2 border-caja-brown/50 focus:border-caja-yellow text-caja-dark"
+                     placeholder="Nome da sua empresa ou projeto"
+                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-caja-dark mb-2">
                     Maior necessidade hoje *
                   </label>
-                  <Input
-                    name="need"
-                    value={formData.need}
-                    onChange={handleChange}
-                    required
-                    className="border-caja-brown/30 focus:border-caja-yellow"
-                    placeholder="Ex: Desenvolver MVP, Sistema personalizado, etc."
-                  />
+                   <Input
+                     name="need"
+                     value={formData.need}
+                     onChange={handleChange}
+                     required
+                     className="border-2 border-caja-brown/50 focus:border-caja-yellow text-caja-dark"
+                     placeholder="Ex: Desenvolver MVP, Sistema personalizado, etc."
+                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-caja-dark mb-2">
                     Conte-nos mais sobre seu projeto
                   </label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="border-caja-brown/30 focus:border-caja-yellow min-h-[120px]"
-                    placeholder="Descreva sua ideia, desafios ou objetivos..."
-                  />
+                   <Textarea
+                     name="message"
+                     value={formData.message}
+                     onChange={handleChange}
+                     className="border-2 border-caja-brown/50 focus:border-caja-yellow min-h-[120px] text-caja-dark"
+                     placeholder="Descreva sua ideia, desafios ou objetivos..."
+                   />
                 </div>
 
                 <Button 
